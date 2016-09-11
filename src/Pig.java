@@ -42,7 +42,6 @@ public class Pig {
     }
     //Method to roll the dice.
     private static int PlayerRoll() {
-        Scanner scanIn = new Scanner(System.in);
         String playAgain = "Y";
         int turnTotal = 0;
         while (playAgain.equalsIgnoreCase("Y")) {
@@ -50,7 +49,6 @@ public class Pig {
             System.out.println("You rolled a " + rollAmount + ".");
             if (rollAmount == 1) {
                 turnTotal = 0;
-//                playAgain = "N";
                 System.out.println("Your total this turn is " + turnTotal + ".");
                 return turnTotal;
             } else turnTotal += rollAmount;
@@ -70,7 +68,7 @@ public class Pig {
         Scanner scanIn = new Scanner(System.in);
         String playAgain = scanIn.next();
         while ((!playAgain.equalsIgnoreCase("Y")) && (!playAgain.equalsIgnoreCase("N"))) {
-            System.out.println("I do not understand your response, please try again.");
+            System.out.println("I don't understand your response, please try again.");
             playAgain = scanIn.next();
         }
         return playAgain;
