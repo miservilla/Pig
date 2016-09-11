@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Pig {
 
     /**
-     * The Pig game for two players, or against the computer.
+     * The Pig game for two players.
      * @param args Command-Line arguments are ignored.
      */
 
