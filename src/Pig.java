@@ -59,7 +59,9 @@ public class Pig {
         }
     }
 
-    //Method to roll the dice.
+    /**Method to roll the dice. It sums each roll into a running total.
+     * @return turnTotal, the running total of each player's turn.
+     */
     private static int PlayerRoll() {
         String playAgain;
         int turnTotal = 0;
@@ -79,13 +81,18 @@ public class Pig {
         return turnTotal;
     }
 
-    //Method to generate random number.
+    /**Method to generate random number.
+     * @return rand, a "pseudorandom" number from 1 to 6, inclusive.
+     */
     private static int RandomNumber() {
         int rand = (int) (Math.random() * 6) + 1;
         return rand;
     }
 
-    //Method for input error control (needs to be either y/n).
+    /**Method for input error control (needs to be either y/n).
+     * @return playAgain, a string value to denote whether player wishes to
+     * to roll again.
+     */
     private static String YesNo() {
         Scanner scanIn = new Scanner(System.in);
         String playAgain = scanIn.next();
@@ -96,7 +103,11 @@ public class Pig {
         return playAgain;
     }
 
-    //Method for random number of times computer dice roll.
+    /**Method for random number of times computer will roll the dice
+     * , and then calls RandomNumber to generate turnTotal, a running score
+     * for the computer.
+     * @return turnTotal, the running total of computer's turn.
+     */
     private static int ComputerRoll() {
         int turnTotal = 0;
         double computerPlayAgain;
